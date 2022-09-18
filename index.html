@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"venomcrt.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="渗透压的博客">
+<meta property="og:url" content="https://venomcrt.github.io/index.html">
+<meta property="og:site_name" content="渗透压的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="渗透压">
+<meta property="article:tag" content="C++,Unreal Engine,daily">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://venomcrt.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>渗透压的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">渗透压的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_1">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_1" class="post-title-link" itemprop="url">Algorithm--棋盘覆盖问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 17:02:03" itemprop="dateModified" datetime="2022-09-18T17:02:03+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;iomanip&gt; </span><br><span class="line">using namespace std;</span><br><span class="line">int T = 0;</span><br><span class="line">int Board[16][16]; //pow(2,k);</span><br><span class="line">void ChessBoard(int tr, int tc, int dr, int dc, int size)</span><br><span class="line">&#123;</span><br><span class="line">	if (size == 1)</span><br><span class="line">		return;</span><br><span class="line">	int t =++T ,s=size;</span><br><span class="line">	s =s/2;</span><br><span class="line">    //判断特殊方格在四个部分中 那个部分里</span><br><span class="line"></span><br><span class="line">    //左上</span><br><span class="line">    if (dr &lt; tr + s &amp;&amp; dc &lt; tc + s) &#123;//在左上 递归</span><br><span class="line">        ChessBoard(tr, tc, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s - 1][tc + s - 1] = t;//不在 置右下角为t</span><br><span class="line">        ChessBoard(tr, tc, tr + s - 1, tc + s - 1, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //右上</span><br><span class="line">    if (dr &lt; tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">        ChessBoard(tr, tc + s, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s - 1][tc + s] = t;</span><br><span class="line">        ChessBoard(tr, tc + s, tr + s - 1, tc + s, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //左下</span><br><span class="line">    if (dr &gt;= tr + s &amp;&amp; dc &lt; tc + s) &#123;</span><br><span class="line">        ChessBoard(tr + s, tc, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s][tc + s - 1] = t;</span><br><span class="line">        ChessBoard(tr + s, tc, tr + s, tc + s - 1, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //右下</span><br><span class="line">    if (dr &gt;= tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">        ChessBoard(tr + s, tc + s, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s][tc + s] = t;</span><br><span class="line">        ChessBoard(tr + s, tc + s, tr + s, tc + s, s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void PrintBoard()//输出</span><br><span class="line">&#123;</span><br><span class="line">    for (int r = 0; r &lt; 16; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int c = 0; c &lt; 16; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; setw(4) &lt;&lt; Board[r][c];</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    for (int r = 0; r &lt; 16; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int c = 0; c &lt; 16; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            Board[r][c] = -1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int dr, dc;</span><br><span class="line">    cin &gt;&gt; dr;//dr&lt;pow(2,k)</span><br><span class="line">    cin &gt;&gt; dc;</span><br><span class="line">    Board[dr][dc] = 0;</span><br><span class="line">    ChessBoard(0, 0, dr, dc, 16);</span><br><span class="line">    PrintBoard();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_2">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_2" class="post-title-link" itemprop="url">Algorithm--二分搜索</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:38" itemprop="dateModified" datetime="2022-09-18T16:56:38+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">int  BinarySearch(int arr[],int &amp;x,int n)</span><br><span class="line">&#123;</span><br><span class="line">	int left = 0,right=n-1;</span><br><span class="line">	while (left &lt;= right) &#123;</span><br><span class="line"></span><br><span class="line">		int mid = (left + right) / 2;</span><br><span class="line">		if (x ==arr[mid]) &#123;</span><br><span class="line">		return mid;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		else if (x &lt; arr[mid])</span><br><span class="line">		&#123;</span><br><span class="line">			right = mid - 1;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(x&gt;arr[mid]) &#123;</span><br><span class="line">			left = mid + 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return -1;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int arr[16] = &#123; 2,4,6,7,8,9,10,11,13,43,54,65,85,88,98,100 &#125;;</span><br><span class="line">	int x;</span><br><span class="line">	cin &gt;&gt; x;</span><br><span class="line">	if (BinarySearch(arr, x, 16)&gt;15||BinarySearch(arr, x, 16) &lt;0) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;not found&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		cout &lt;&lt; arr[BinarySearch(arr, x, 16)] &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_3">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_3" class="post-title-link" itemprop="url">Algorithm--矩阵连乘</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:36" itemprop="dateModified" datetime="2022-09-18T16:56:36+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;iomanip&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#define N 8  //N为N，实际表示有N-1个矩阵</span><br><span class="line">/*</span><br><span class="line">*矩阵链构造函数：构造m[][]和s[][]</span><br><span class="line">*m中存储的值是计算出来的最小乘法次数，比如m[1][5]就是A1A2A3A4A5的最小乘法次数</span><br><span class="line">*s中存储的是获取最小乘法次数时的断链点，s[1][5]对应的就是如何拆分A1A2A3A4A5,</span><br><span class="line">*比如S[1][5]=3可表示：(A1A2A3)(A4A5)，当然内部断链还会继续划分A1A2A3</span><br><span class="line">*/</span><br><span class="line">void MatrixChain(int* p, int n, int m[][N], int s[][N]) &#123;</span><br><span class="line">    for (int i = 1; i &lt;= n; i++) &#123;     //矩阵链中只有一个矩阵时，次数为0，注意m[0][X]时未使用的</span><br><span class="line">        m[i][i] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int r = 2; r &lt;= n; r++) &#123;    //矩阵链长度,从长度为2开始</span><br><span class="line">        for (int i = 1; i &lt;= n - r + 1; i++) &#123;    //根据链长度，控制链最大的可起始点</span><br><span class="line">            int j = i + r - 1;  //每一斜列</span><br><span class="line">            m[i][j] =  m[i + 1][j] + p[i - 1] * p[i] * p[j];   //从A1（A2-An）开始分</span><br><span class="line">            s[i][j] = i;</span><br><span class="line">            for (int k = i + 1; k &lt; j; k++) &#123;   //若r=4则从(A1A2)(A3A4)到(A1-A3)(A4)</span><br><span class="line">                int t = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j];// m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j]</span><br><span class="line">                if (t &lt; m[i][j]) &#123;</span><br><span class="line">                    m[i][j] = t;</span><br><span class="line">                    s[i][j] = k;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">*追踪函数：根据输入的i,j限定需要获取的矩阵链的始末位置，s存储断链点</span><br><span class="line">*/</span><br><span class="line">void Traceback(int i, int j, int s[][N]) &#123;</span><br><span class="line">    if (i == j)       //回归条件</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;A&quot; &lt;&lt; i;</span><br><span class="line">    &#125;</span><br><span class="line">    else       //按照最佳断点一分为二，接着继续递归</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;(&quot;;</span><br><span class="line">        Traceback(i, s[i][j], s);//根据S表中的数据进行断点</span><br><span class="line">        Traceback(s[i][j] + 1, j, s);</span><br><span class="line">        cout &lt;&lt; &quot;)&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">void printf_M(int m[][N]) &#123;</span><br><span class="line"></span><br><span class="line">    for (int i = 0; i &lt; N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 0; j &lt;N; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; setw(6)&lt;&lt; m[i][j] &lt;&lt;&quot; &quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int p[N] = &#123; 4,5,3,6,4,5,7,8 &#125;;</span><br><span class="line">    int m[N][N]&#123;&#125;, s[N][N]&#123;&#125;;</span><br><span class="line"></span><br><span class="line">    MatrixChain(p, N - 1, m, s);//N-1因为只有六个矩阵</span><br><span class="line">    printf_M(m);</span><br><span class="line">    printf_M(s);</span><br><span class="line">    Traceback(1, 7, s);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_4">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_4" class="post-title-link" itemprop="url">Algorithm--快速排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:35" itemprop="dateModified" datetime="2022-09-18T16:56:35+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">void printf_T(int A[], int size) &#123;</span><br><span class="line">	for (int i = 0; i &lt; size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; A[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">int Partition(int A[], int low, int high,int size) &#123;</span><br><span class="line">	int pivot = A[low];</span><br><span class="line">	while (low &lt; high) &#123;</span><br><span class="line">		while (low &lt; high &amp;&amp; A[high] &gt;= pivot) &#123;</span><br><span class="line">			high--;</span><br><span class="line">		&#125;</span><br><span class="line">		A[low] = A[high];</span><br><span class="line">		while (low &lt; high &amp;&amp; A[low] &lt;= pivot) &#123;</span><br><span class="line">			low++;</span><br><span class="line">		&#125;</span><br><span class="line">		A[high] = A[low];</span><br><span class="line">	&#125;</span><br><span class="line">	A[low] = pivot;</span><br><span class="line">	printf_T(A, size);</span><br><span class="line">	return low;</span><br><span class="line">&#125;</span><br><span class="line">void QuickSort(int* A, int low, int high,int size) &#123;</span><br><span class="line">	if (low &lt; high) &#123;</span><br><span class="line">		int pivotpos = Partition(A, low, high,size);</span><br><span class="line">		QuickSort(A, low, pivotpos - 1,size);</span><br><span class="line">		QuickSort(A, pivotpos + 1, high,size);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void T_QuickSort() &#123;</span><br><span class="line">	int size;</span><br><span class="line">	cin &gt;&gt; size;</span><br><span class="line">	int* A = new int[size];</span><br><span class="line">	for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">		cin &gt;&gt; A[i];</span><br><span class="line">	&#125;</span><br><span class="line">	QuickSort(A, 0, size - 1,size);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">	T_QuickSort();</span><br><span class="line">&#125;         </span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_5">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_5" class="post-title-link" itemprop="url">Algorithm--归并排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:33" itemprop="dateModified" datetime="2022-09-18T16:56:33+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">//递归</span><br><span class="line"></span><br><span class="line">int Size;</span><br><span class="line">void printf_M(int arr[]);</span><br><span class="line">void mergeSort(int arr[], int l, int mid, int r) &#123;</span><br><span class="line">	</span><br><span class="line">	int* temp = new int[Size + 4];//建立一个临时存储数组</span><br><span class="line">	int p1 = l;</span><br><span class="line">	int p2 = mid + 1;</span><br><span class="line">	int p = 0;</span><br><span class="line"></span><br><span class="line">	while (p1 &lt;= mid &amp;&amp; p2 &lt;= r) &#123;</span><br><span class="line">		if (arr[p1] &lt;= arr[p2]) &#123;</span><br><span class="line">			temp[p++] = arr[p1++];</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			temp[p++] = arr[p2++];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	while (p1 &lt;= mid) &#123;</span><br><span class="line">		temp[p++] = arr[p1++];</span><br><span class="line">	&#125;</span><br><span class="line">	while (p2 &lt;= r) &#123;</span><br><span class="line">		temp[p++] = arr[p2++];</span><br><span class="line">	&#125;</span><br><span class="line">	for (int i = 0; i &lt; p; i++) &#123;</span><br><span class="line">		//存入数组</span><br><span class="line">		arr[i + l] = temp[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void merge(int arr[], int l, int r) &#123;</span><br><span class="line">	if (l &gt;= r) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	int mid = (l + r) / 2;</span><br><span class="line">	</span><br><span class="line">	merge(arr, l, mid);//左边拆分</span><br><span class="line">	</span><br><span class="line">	merge(arr, mid + 1, r);//右边拆分</span><br><span class="line">	</span><br><span class="line">	mergeSort(arr, l, mid, r);//合并并排序</span><br><span class="line">	printf_M(arr);</span><br><span class="line">&#125;</span><br><span class="line">void T_merge() &#123;</span><br><span class="line">	cin &gt;&gt; Size;</span><br><span class="line">	int* arr = new int[Size];</span><br><span class="line">	for (int i = 0; i &lt; Size; i++) &#123;</span><br><span class="line">		cin &gt;&gt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	merge(arr, 0, Size - 1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//非递归</span><br><span class="line">template&lt;typename T&gt;</span><br><span class="line">void NR_Merge(T A[], T TA[], int left, int mid, int right)</span><br><span class="line">&#123;</span><br><span class="line">	int L1 = left, Tm = mid + 1, L2 = left;</span><br><span class="line">	while ((L1 &lt;= mid) &amp;&amp; (Tm &lt;=</span><br><span class="line">		</span><br><span class="line">		right))</span><br><span class="line">	&#123;</span><br><span class="line">		if (A[L1] &lt;= A[Tm]) &#123;</span><br><span class="line">			TA[L2++] = A[L1++];</span><br><span class="line">		&#125;</span><br><span class="line">		else &#123;</span><br><span class="line">			TA[L2++] = A[Tm++];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	while (L1 &lt;= mid)</span><br><span class="line">	&#123;</span><br><span class="line">		TA[L2++] = A[L1++];</span><br><span class="line">	&#125;</span><br><span class="line">	while (Tm &lt;= right) &#123;</span><br><span class="line">		TA[L2++] = A[Tm++];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">template&lt;typename T&gt;</span><br><span class="line">void NR_MergePass(T A[], T TA[], int len, int size) &#123;//len为当前</span><br><span class="line">	int i=0;</span><br><span class="line">	while(i &lt;= size - 2 * len)</span><br><span class="line">	&#123;</span><br><span class="line">		NR_Merge(A, TA, i, i + len-1, i + 2 * len - 1);</span><br><span class="line">		i += 2 * len;</span><br><span class="line">	&#125;</span><br><span class="line">	if (i + len &lt; size)</span><br><span class="line">		NR_Merge(A, TA, i, i + len - 1, size - 1);</span><br><span class="line">	else</span><br><span class="line">		for (int j = i; j &lt; size; j++) &#123;</span><br><span class="line">			TA[j] = A[j];</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line">template&lt;typename T&gt;</span><br><span class="line">void NR_MergeSort(T A[], int size)</span><br><span class="line">&#123;</span><br><span class="line">	T* TA = new T[size];</span><br><span class="line">	int Ts = 1;</span><br><span class="line">	while (Ts &lt; size) &#123;</span><br><span class="line">		NR_MergePass(A, TA, Ts, size);</span><br><span class="line">		Ts *= 2;</span><br><span class="line">		NR_MergePass(TA, A, Ts, size);</span><br><span class="line">		Ts *= 2;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void T_NR_MergeSort() &#123;</span><br><span class="line">	int size;</span><br><span class="line">	cin &gt;&gt; size;</span><br><span class="line">	int* A = new int[size];</span><br><span class="line">	for (int i = 0; i &lt; size; i++)</span><br><span class="line">		cin &gt;&gt; A[i];</span><br><span class="line">	NR_MergeSort(A, size);</span><br><span class="line">	for (int i = 0; i &lt; size; i++)</span><br><span class="line">		cout &lt;&lt; A[i] &lt;&lt; &#x27; &#x27;;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	//T_merge();</span><br><span class="line">	//T_NR_MergeSort();</span><br><span class="line">	return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">void printf_M(int arr[]) &#123;</span><br><span class="line">	for (int i = 0; i &lt; Size; i++) &#123;</span><br><span class="line">		cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_6">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_6" class="post-title-link" itemprop="url">Algorithm--最长公共子序列</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:32" itemprop="dateModified" datetime="2022-09-18T16:56:32+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void LCSLength(int m,int n,char*x,char*y,int **c,int**b) &#123;</span><br><span class="line">	int i, j;</span><br><span class="line">	for (i = 0; i &lt;= m; i++) &#123;</span><br><span class="line">		c[i][0] = 0;</span><br><span class="line">		b[i][0] = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	for (j = 1; j &lt;= n; j++) &#123;</span><br><span class="line">		c[0][j] = 0;</span><br><span class="line">		b[0][j] = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i = 1; i &lt;= m; i++) &#123;</span><br><span class="line">		for (j = 1; j &lt;= n; j++) &#123;</span><br><span class="line">			if (x[i-1] == y[j-1]) &#123;</span><br><span class="line">				c[i][j] = c[i - 1][j - 1]+1;</span><br><span class="line">				b[i][j] = 1;</span><br><span class="line">			&#125;</span><br><span class="line">			else if (c[i - 1][j] &gt;= c[i][j - 1]) &#123;</span><br><span class="line">				c[i][j] = c[i - 1][j];</span><br><span class="line">				b[i][j] = 2;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				c[i][j] = c[i][j-1];</span><br><span class="line">				b[i][j] = 3;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LCS(int i,int j,char*x,int**b) &#123;</span><br><span class="line">	if (i == 0 || j == 0) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	if (b[i][j] == 1) &#123;</span><br><span class="line">		LCS(i - 1, j - 1, x,b);</span><br><span class="line">	cout &lt;&lt; x[i-1];</span><br><span class="line">	&#125;</span><br><span class="line">	else if (b[i][j] == 2) &#123;</span><br><span class="line">		LCS(i - 1, j, x, b);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		LCS(i, j - 1, x, b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void p(int** t,int m,int n) &#123;</span><br><span class="line">	for (int i = 0; i &lt; m; i++) &#123;</span><br><span class="line">		for (int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">			cout &lt;&lt; t[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char* x=(char*)&quot;safasdkhgasdg&quot;;</span><br><span class="line">	char* y = (char*)&quot;adgasg&quot;;</span><br><span class="line">	int m, n;</span><br><span class="line">	m = strlen(x);</span><br><span class="line">	n = strlen(y);</span><br><span class="line">	int** c=new int*[m];</span><br><span class="line">	int** b = new int* [m];</span><br><span class="line">	for (int i = 0; i &lt;= m; i++)&#123;</span><br><span class="line">		c[i] = new int[n];</span><br><span class="line">	&#125;</span><br><span class="line">	for (int i = 0; i &lt;= m; i++) &#123;</span><br><span class="line">		b[i] = new int[n];</span><br><span class="line">	&#125;</span><br><span class="line">	LCSLength(m, n, x, y, c, b);</span><br><span class="line">	p(c, m, n);</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	p(b, m, n);</span><br><span class="line">	LCS(m,n,x,b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/OpenGL_1">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/OpenGL_1" class="post-title-link" itemprop="url">OpenGL--创建三角形</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:30" itemprop="dateModified" datetime="2022-09-18T16:56:30+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;glad/glad.h&gt;</span><br><span class="line">#include &lt;GLFW/glfw3.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int Screen_Width = 600;//窗口宽</span><br><span class="line">int Screen_Height = 400;//窗口高</span><br><span class="line">//顶点着色器</span><br><span class="line">const char* vertexShaderSource = </span><br><span class="line">&quot;#version 330 core\n&quot;</span><br><span class="line">&quot;layout (location = 0) in vec3 aPos;\n&quot;</span><br><span class="line">&quot;void main()\n&quot;</span><br><span class="line">&quot;&#123;\n&quot;</span><br><span class="line">&quot;   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n&quot;</span><br><span class="line">&quot;&#125;\0&quot;;</span><br><span class="line">//片段着色器</span><br><span class="line">const char* fragmentShaderSource = </span><br><span class="line">&quot;#version 330 core\n&quot;</span><br><span class="line">&quot;out vec4 FragColor;\n&quot;</span><br><span class="line">&quot;void main()\n&quot;</span><br><span class="line">&quot;&#123;\n&quot;</span><br><span class="line">&quot;   FragColor = vec4(1.0f, 1.0f, 0.0f, 1.0f);\n&quot;</span><br><span class="line">&quot;&#125;\n\0&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    glfwInit();//初始化GLFW</span><br><span class="line">    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);//版本号3</span><br><span class="line">    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);//次版本号3</span><br><span class="line">    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);//核心模式</span><br><span class="line">    glfwWindowHint(GLFW_RESIZABLE, false);//不可改变窗口大小</span><br><span class="line"></span><br><span class="line">    auto Windows = glfwCreateWindow(Screen_Width, Screen_Height, &quot;Triangle&quot;, NULL, NULL);//创建窗口 宽 高 名称</span><br><span class="line"></span><br><span class="line">    if (Windows == NULL) &#123;//判断创建窗口是否成功</span><br><span class="line">        cout &lt;&lt; &quot;打开窗口失败&quot;&lt;&lt;endl;</span><br><span class="line">        glfwTerminate();</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    glfwMakeContextCurrent(Windows);//将窗口的上下文设置为当前线程的主上下文</span><br><span class="line"></span><br><span class="line">    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))//初始化glad </span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;初始化GLAD失败&quot;&lt;&lt;endl;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    glViewport(0, 0, Screen_Width, Screen_Height);//指定当前视口尺寸</span><br><span class="line"></span><br><span class="line">    const float Triangle[] = &#123;//三角形顶点数据</span><br><span class="line">    0.5f, 0.5f, 0.0f,   // 右上角</span><br><span class="line">    0.5f, -0.5f, 0.0f,  // 右下角</span><br><span class="line">    -0.5f, 0.5f, 0.0f,  // 左上角</span><br><span class="line">    // 第二个三角形</span><br><span class="line">    0.5f, -0.6f, 0.0f,  // 右下角</span><br><span class="line">    -0.5f, -0.6f, 0.0f, // 左下角</span><br><span class="line">    -0.5f, 0.4f, 0.0f   //左上角</span><br><span class="line">    &#125;;</span><br><span class="line">    //生成并绑定VAO VBO</span><br><span class="line">    GLuint VAO;</span><br><span class="line">    glGenVertexArrays(1, &amp;VAO);</span><br><span class="line">    glBindVertexArray(VAO);</span><br><span class="line">    GLuint VBO;</span><br><span class="line">    glGenBuffers(1, &amp;VBO);</span><br><span class="line">    glBindBuffer(GL_ARRAY_BUFFER,VBO);</span><br><span class="line"></span><br><span class="line">    glBufferData(GL_ARRAY_BUFFER,sizeof(Triangle),Triangle,GL_STATIC_DRAW);    //将顶点数据绑定至当前默认的缓冲中  </span><br><span class="line"></span><br><span class="line">    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);//设置顶点属性指针  3分量</span><br><span class="line">    glEnableVertexAttribArray(0);</span><br><span class="line">    //解绑VAO VBO</span><br><span class="line">    glBindVertexArray(0);</span><br><span class="line">    glBindBuffer(GL_ARRAY_BUFFER, 0);</span><br><span class="line">    //生成并编译着色器</span><br><span class="line">    //顶点着色器</span><br><span class="line">    int VertexShader = glCreateShader(GL_VERTEX_SHADER);</span><br><span class="line">    glShaderSource(VertexShader, 1, &amp;vertexShaderSource, NULL);</span><br><span class="line">    glCompileShader(VertexShader);</span><br><span class="line">    //顶点着色器编译是否成功</span><br><span class="line">    int Success;</span><br><span class="line">    char InfoLog[512];</span><br><span class="line">    </span><br><span class="line">    glGetShaderiv(VertexShader, GL_COMPILE_STATUS, &amp;Success);</span><br><span class="line">    if (!Success)</span><br><span class="line">    &#123;</span><br><span class="line">        glGetShaderInfoLog(VertexShader, 512, NULL, InfoLog);</span><br><span class="line">        cout &lt;&lt; &quot;着色编译器编译失败\n&quot; &lt;&lt; InfoLog &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    //片段着色器</span><br><span class="line">    int FragmentShader = glCreateShader(GL_FRAGMENT_SHADER);</span><br><span class="line">    glShaderSource(FragmentShader, 1, &amp;fragmentShaderSource, NULL);</span><br><span class="line">    glCompileShader(FragmentShader);</span><br><span class="line">    //片段着色器编译是否成功</span><br><span class="line">    glGetShaderiv(FragmentShader, GL_COMPILE_STATUS, &amp;Success);</span><br><span class="line">    if (!Success)</span><br><span class="line">    &#123;</span><br><span class="line">        glGetShaderInfoLog(FragmentShader, 512, NULL, InfoLog);</span><br><span class="line">        std::cout &lt;&lt; &quot;片段着色器编译失败\n&quot; &lt;&lt; InfoLog &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    //链接顶点和片段着色器至一个着色器程序</span><br><span class="line">    int ShaderProgram = glCreateProgram();</span><br><span class="line">    glAttachShader(ShaderProgram, VertexShader);</span><br><span class="line">    glAttachShader(ShaderProgram, FragmentShader);</span><br><span class="line">    glLinkProgram(ShaderProgram);</span><br><span class="line">    //检查着色器链接是否成功</span><br><span class="line">    glGetProgramiv(ShaderProgram, GL_LINK_STATUS, &amp;Success);</span><br><span class="line">    if (!Success) &#123;</span><br><span class="line">        glGetProgramInfoLog(ShaderProgram, 512, NULL, InfoLog);</span><br><span class="line">        cout &lt;&lt; &quot;着色器链接失败\n&quot; &lt;&lt; InfoLog &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    //删除着色器</span><br><span class="line">    glDeleteShader(VertexShader);</span><br><span class="line">    glDeleteShader(FragmentShader);</span><br><span class="line">    //渲染</span><br><span class="line">    while (!glfwWindowShouldClose(Windows))</span><br><span class="line">    &#123;</span><br><span class="line">        //清空颜色缓冲区</span><br><span class="line">        glClearColor(0.0f,0.0f,1.0f,1.0f);</span><br><span class="line">        glClear(GL_COLOR_BUFFER_BIT);</span><br><span class="line">        //使用着色器程序</span><br><span class="line">        glUseProgram(ShaderProgram);</span><br><span class="line">        //绘制三角形</span><br><span class="line"></span><br><span class="line">        glBindVertexArray(VAO);//绑定VAO</span><br><span class="line">        glDrawArrays(GL_TRIANGLES, 0, 6);//绘制三角形</span><br><span class="line">        glBindVertexArray(0);//解除绑定</span><br><span class="line">        //交换缓冲并且检查是否有触发事件</span><br><span class="line">        glfwSwapBuffers(Windows);</span><br><span class="line">        glfwPollEvents(); </span><br><span class="line">    &#125;</span><br><span class="line">    //删除VAO VBO</span><br><span class="line">    glDeleteVertexArrays(1, &amp;VAO);</span><br><span class="line">    glDeleteBuffers(1, &amp;VBO);</span><br><span class="line">    glDeleteProgram(ShaderProgram);</span><br><span class="line">    //清理资源</span><br><span class="line">    glfwTerminate();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">渗透压</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">渗透压</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
