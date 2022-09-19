@@ -230,8 +230,8 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/09/02/Algorithm_6" rel="next" title="Algorithm--最长公共子序列">
-      Algorithm--最长公共子序列 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/09/02/Algorithm_7" rel="next" title="Algorithm--0-1背包问题">
+      Algorithm--0-1背包问题 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -303,7 +303,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
