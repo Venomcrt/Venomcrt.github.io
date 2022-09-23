@@ -151,79 +151,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_1">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="渗透压">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="渗透压的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/02/Algorithm_1" class="post-title-link" itemprop="url">Algorithm--棋盘覆盖问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-18 17:02:03" itemprop="dateModified" datetime="2022-09-18T17:02:03+08:00">2022-09-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;iomanip&gt; </span><br><span class="line">using namespace std;</span><br><span class="line">int T = 0;</span><br><span class="line">int Board[16][16]; //pow(2,k);</span><br><span class="line">void ChessBoard(int tr, int tc, int dr, int dc, int size)</span><br><span class="line">&#123;</span><br><span class="line">	if (size == 1)</span><br><span class="line">		return;</span><br><span class="line">	int t =++T ,s=size;</span><br><span class="line">	s =s/2;</span><br><span class="line">    //判断特殊方格在四个部分中 那个部分里</span><br><span class="line"></span><br><span class="line">    //左上</span><br><span class="line">    if (dr &lt; tr + s &amp;&amp; dc &lt; tc + s) &#123;//在左上 递归</span><br><span class="line">        ChessBoard(tr, tc, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s - 1][tc + s - 1] = t;//不在 置右下角为t</span><br><span class="line">        ChessBoard(tr, tc, tr + s - 1, tc + s - 1, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //右上</span><br><span class="line">    if (dr &lt; tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">        ChessBoard(tr, tc + s, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s - 1][tc + s] = t;</span><br><span class="line">        ChessBoard(tr, tc + s, tr + s - 1, tc + s, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //左下</span><br><span class="line">    if (dr &gt;= tr + s &amp;&amp; dc &lt; tc + s) &#123;</span><br><span class="line">        ChessBoard(tr + s, tc, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s][tc + s - 1] = t;</span><br><span class="line">        ChessBoard(tr + s, tc, tr + s, tc + s - 1, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //右下</span><br><span class="line">    if (dr &gt;= tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">        ChessBoard(tr + s, tc + s, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s][tc + s] = t;</span><br><span class="line">        ChessBoard(tr + s, tc + s, tr + s, tc + s, s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void PrintBoard()//输出</span><br><span class="line">&#123;</span><br><span class="line">    for (int r = 0; r &lt; 16; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int c = 0; c &lt; 16; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; setw(4) &lt;&lt; Board[r][c];</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    for (int r = 0; r &lt; 16; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int c = 0; c &lt; 16; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            Board[r][c] = -1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int dr, dc;</span><br><span class="line">    cin &gt;&gt; dr;//dr&lt;pow(2,k)</span><br><span class="line">    cin &gt;&gt; dc;</span><br><span class="line">    Board[dr][dc] = 0;</span><br><span class="line">    ChessBoard(0, 0, dr, dc, 16);</span><br><span class="line">    PrintBoard();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_2">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -297,7 +224,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_4">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_1">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -311,7 +238,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/02/Algorithm_4" class="post-title-link" itemprop="url">Algorithm--快速排序</a>
+            <a href="/2022/09/02/Algorithm_1" class="post-title-link" itemprop="url">Algorithm--棋盘覆盖问题</a>
         </h2>
 
         <div class="post-meta">
@@ -328,7 +255,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-18 16:56:35" itemprop="dateModified" datetime="2022-09-18T16:56:35+08:00">2022-09-18</time>
+                <time title="修改时间：2022-09-18 17:02:03" itemprop="dateModified" datetime="2022-09-18T17:02:03+08:00">2022-09-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -351,7 +278,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">void printf_T(int A[], int size) &#123;</span><br><span class="line">	for (int i = 0; i &lt; size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; A[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">int Partition(int A[], int low, int high,int size) &#123;</span><br><span class="line">	int pivot = A[low];</span><br><span class="line">	while (low &lt; high) &#123;</span><br><span class="line">		while (low &lt; high &amp;&amp; A[high] &gt;= pivot) &#123;</span><br><span class="line">			high--;</span><br><span class="line">		&#125;</span><br><span class="line">		A[low] = A[high];</span><br><span class="line">		while (low &lt; high &amp;&amp; A[low] &lt;= pivot) &#123;</span><br><span class="line">			low++;</span><br><span class="line">		&#125;</span><br><span class="line">		A[high] = A[low];</span><br><span class="line">	&#125;</span><br><span class="line">	A[low] = pivot;</span><br><span class="line">	printf_T(A, size);</span><br><span class="line">	return low;</span><br><span class="line">&#125;</span><br><span class="line">void QuickSort(int* A, int low, int high,int size) &#123;</span><br><span class="line">	if (low &lt; high) &#123;</span><br><span class="line">		int pivotpos = Partition(A, low, high,size);</span><br><span class="line">		QuickSort(A, low, pivotpos - 1,size);</span><br><span class="line">		QuickSort(A, pivotpos + 1, high,size);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void T_QuickSort() &#123;</span><br><span class="line">	int size;</span><br><span class="line">	cin &gt;&gt; size;</span><br><span class="line">	int* A = new int[size];</span><br><span class="line">	for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">		cin &gt;&gt; A[i];</span><br><span class="line">	&#125;</span><br><span class="line">	QuickSort(A, 0, size - 1,size);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">	T_QuickSort();</span><br><span class="line">&#125;         </span><br></pre></td></tr></table></figure>
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;iomanip&gt; </span><br><span class="line">using namespace std;</span><br><span class="line">int T = 0;</span><br><span class="line">int Board[16][16]; //pow(2,k);</span><br><span class="line">void ChessBoard(int tr, int tc, int dr, int dc, int size)</span><br><span class="line">&#123;</span><br><span class="line">	if (size == 1)</span><br><span class="line">		return;</span><br><span class="line">	int t =++T ,s=size;</span><br><span class="line">	s =s/2;</span><br><span class="line">    //判断特殊方格在四个部分中 那个部分里</span><br><span class="line"></span><br><span class="line">    //左上</span><br><span class="line">    if (dr &lt; tr + s &amp;&amp; dc &lt; tc + s) &#123;//在左上 递归</span><br><span class="line">        ChessBoard(tr, tc, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s - 1][tc + s - 1] = t;//不在 置右下角为t</span><br><span class="line">        ChessBoard(tr, tc, tr + s - 1, tc + s - 1, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //右上</span><br><span class="line">    if (dr &lt; tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">        ChessBoard(tr, tc + s, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s - 1][tc + s] = t;</span><br><span class="line">        ChessBoard(tr, tc + s, tr + s - 1, tc + s, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //左下</span><br><span class="line">    if (dr &gt;= tr + s &amp;&amp; dc &lt; tc + s) &#123;</span><br><span class="line">        ChessBoard(tr + s, tc, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s][tc + s - 1] = t;</span><br><span class="line">        ChessBoard(tr + s, tc, tr + s, tc + s - 1, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //右下</span><br><span class="line">    if (dr &gt;= tr + s &amp;&amp; dc &gt;= tc + s) &#123;</span><br><span class="line">        ChessBoard(tr + s, tc + s, dr, dc, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        Board[tr + s][tc + s] = t;</span><br><span class="line">        ChessBoard(tr + s, tc + s, tr + s, tc + s, s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void PrintBoard()//输出</span><br><span class="line">&#123;</span><br><span class="line">    for (int r = 0; r &lt; 16; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int c = 0; c &lt; 16; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; setw(4) &lt;&lt; Board[r][c];</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    for (int r = 0; r &lt; 16; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int c = 0; c &lt; 16; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            Board[r][c] = -1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int dr, dc;</span><br><span class="line">    cin &gt;&gt; dr;//dr&lt;pow(2,k)</span><br><span class="line">    cin &gt;&gt; dc;</span><br><span class="line">    Board[dr][dc] = 0;</span><br><span class="line">    ChessBoard(0, 0, dr, dc, 16);</span><br><span class="line">    PrintBoard();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -516,7 +443,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_6">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_8">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -530,7 +457,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/02/Algorithm_6" class="post-title-link" itemprop="url">Algorithm--最长公共子序列</a>
+            <a href="/2022/09/02/Algorithm_8" class="post-title-link" itemprop="url">Algorithm--哈夫曼编码</a>
         </h2>
 
         <div class="post-meta">
@@ -547,7 +474,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-18 16:56:32" itemprop="dateModified" datetime="2022-09-18T16:56:32+08:00">2022-09-18</time>
+                <time title="修改时间：2022-09-23 15:01:31" itemprop="dateModified" datetime="2022-09-23T15:01:31+08:00">2022-09-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -570,7 +497,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void LCSLength(int m,int n,char*x,char*y,int **c,int**b) &#123;</span><br><span class="line">	int i, j;</span><br><span class="line">	for (i = 0; i &lt;= m; i++) &#123;</span><br><span class="line">		c[i][0] = 0;</span><br><span class="line">		b[i][0] = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	for (j = 1; j &lt;= n; j++) &#123;</span><br><span class="line">		c[0][j] = 0;</span><br><span class="line">		b[0][j] = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i = 1; i &lt;= m; i++) &#123;</span><br><span class="line">		for (j = 1; j &lt;= n; j++) &#123;</span><br><span class="line">			if (x[i-1] == y[j-1]) &#123;</span><br><span class="line">				c[i][j] = c[i - 1][j - 1]+1;</span><br><span class="line">				b[i][j] = 1;</span><br><span class="line">			&#125;</span><br><span class="line">			else if (c[i - 1][j] &gt;= c[i][j - 1]) &#123;</span><br><span class="line">				c[i][j] = c[i - 1][j];</span><br><span class="line">				b[i][j] = 2;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				c[i][j] = c[i][j-1];</span><br><span class="line">				b[i][j] = 3;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LCS(int i,int j,char*x,int**b) &#123;</span><br><span class="line">	if (i == 0 || j == 0) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	if (b[i][j] == 1) &#123;</span><br><span class="line">		LCS(i - 1, j - 1, x,b);</span><br><span class="line">	cout &lt;&lt; x[i-1];</span><br><span class="line">	&#125;</span><br><span class="line">	else if (b[i][j] == 2) &#123;</span><br><span class="line">		LCS(i - 1, j, x, b);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		LCS(i, j - 1, x, b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void p(int** t,int m,int n) &#123;</span><br><span class="line">	for (int i = 0; i &lt; m; i++) &#123;</span><br><span class="line">		for (int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">			cout &lt;&lt; t[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char* x=(char*)&quot;safasdkhgasdg&quot;;</span><br><span class="line">	char* y = (char*)&quot;adgasg&quot;;</span><br><span class="line">	int m, n;</span><br><span class="line">	m = strlen(x);</span><br><span class="line">	n = strlen(y);</span><br><span class="line">	int** c=new int*[m];</span><br><span class="line">	int** b = new int* [m];</span><br><span class="line">	for (int i = 0; i &lt;= m; i++)&#123;</span><br><span class="line">		c[i] = new int[n];</span><br><span class="line">	&#125;</span><br><span class="line">	for (int i = 0; i &lt;= m; i++) &#123;</span><br><span class="line">		b[i] = new int[n];</span><br><span class="line">	&#125;</span><br><span class="line">	LCSLength(m, n, x, y, c, b);</span><br><span class="line">	p(c, m, n);</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	p(b, m, n);</span><br><span class="line">	LCS(m,n,x,b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">struct HuffmanNode &#123;</span><br><span class="line">    int weight&#123;&#125;; // 权重，出现的次数或者频率</span><br><span class="line">    char ch&#123;&#125;; // 存储符号</span><br><span class="line">    string code&#123;&#125;; // 存储该符号对应的编码</span><br><span class="line">    int leftChild&#123;&#125;, rightChild&#123;&#125;, parent&#123;&#125;; // 左、右孩子，父结点</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">class HuffmanCode &#123;</span><br><span class="line">public:</span><br><span class="line">    HuffmanCode(string str); // 构造函数</span><br><span class="line">    ~HuffmanCode(); // 析构函数</span><br><span class="line">    void getMin(int&amp; first, int&amp; second, int parent); // 选取两个较小的元素</span><br><span class="line">    void Merge(int first, int second, int parent); // 合并</span><br><span class="line">    void Encode(string str); // 编码:利用哈夫曼编码原理对数据进行加密</span><br><span class="line">    void Decode(string str); // 解码</span><br><span class="line">private:</span><br><span class="line">    HuffmanNode* HuffmanTree; // 数组</span><br><span class="line">    int leafSize; // 统计不同字符的个数</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 构造函数</span><br><span class="line">HuffmanCode::HuffmanCode(string str) &#123;</span><br><span class="line">    int len = (int)str.size(); // 字符串的长度</span><br><span class="line">    int arr[256], i; // 存储字符串各个字符的个数5</span><br><span class="line">    HuffmanTree = new HuffmanNode[1000000]; // 动态分配空间****************（一定要大 因为又存储父节点 又存储子节点  目前先很大 具体到多少我再研究）</span><br><span class="line"></span><br><span class="line">    // 1.初始化HuffmanTree数组</span><br><span class="line">    for (i = 0; i &lt; (2 * len - 1); i++) &#123; // 叶子结点为len,则树最多有2*len-1个结点</span><br><span class="line">        HuffmanTree[i].leftChild = HuffmanTree[i].rightChild = HuffmanTree[i].parent = -1;</span><br><span class="line">        HuffmanTree[i].code = &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    // 2.统计输入的字符串的各个字符出现的个数</span><br><span class="line">    memset(arr, 0, sizeof(arr)); // 清零</span><br><span class="line">    for (i = 0; i &lt; len; i++) // 统计次数</span><br><span class="line">        arr[str[i]]++; // str[i] -&gt; 转成对应的ASCII码，如&#x27;0&#x27;-&gt;48</span><br><span class="line">    leafSize = 0; // 出现不同字符的个数</span><br><span class="line">    for (i = 0; i &lt; 256; i++) &#123;</span><br><span class="line">        if (arr[i] != 0) &#123; // 有出现的字符</span><br><span class="line">            // cout &lt;&lt; &quot;字符:&quot; &lt;&lt; (char)i &lt;&lt; &quot;次数为：&quot; &lt;&lt; arr[i] &lt;&lt; endl;</span><br><span class="line">            HuffmanTree[leafSize].ch = (char)i; // 将数字转成对应的字符</span><br><span class="line">            HuffmanTree[leafSize].weight = arr[i]; // 权重</span><br><span class="line">            leafSize++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 3.选取两个较小值合并</span><br><span class="line">    int first, second; // 两个较小的结点</span><br><span class="line">    for (i = leafSize; i &lt; (2 * leafSize - 1); i++) &#123; // 做leafSize-1趟</span><br><span class="line">        getMin(first, second, i); // 选取两个较小的元素</span><br><span class="line">        Merge(first, second, i); // 合并</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 析构函数</span><br><span class="line">HuffmanCode::~HuffmanCode() &#123;</span><br><span class="line">    delete[]HuffmanTree;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 选取权值两个较小的元素</span><br><span class="line">void HuffmanCode::getMin(int&amp; first, int&amp; second, int parent) &#123;</span><br><span class="line">    double weight = 0;</span><br><span class="line">    int i;</span><br><span class="line"></span><br><span class="line">    // 找权重最小元素</span><br><span class="line">    for (i = 0; i &lt; parent; i++) &#123;</span><br><span class="line">        if (HuffmanTree[i].parent != -1) // 已选过，直接跳过</span><br><span class="line">            continue;</span><br><span class="line">        if (weight == 0) &#123; // 第一次找到没选过的结点</span><br><span class="line">            weight = HuffmanTree[i].weight;</span><br><span class="line">            first = i;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (HuffmanTree[i].weight &lt; weight) &#123; // 权值更小</span><br><span class="line">            weight = HuffmanTree[i].weight;</span><br><span class="line">            first = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 找权重次小元素</span><br><span class="line">    weight = 0;</span><br><span class="line">    for (i = 0; i &lt; parent; i++) &#123;</span><br><span class="line">        if (HuffmanTree[i].parent != -1 || i == first) // 已选过，直接跳过</span><br><span class="line">            continue;</span><br><span class="line">        if (weight == 0) &#123; // 第一次找到没选过的结点</span><br><span class="line">            weight = HuffmanTree[i].weight;</span><br><span class="line">            second = i;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (HuffmanTree[i].weight &lt; weight) &#123; // 权值更小</span><br><span class="line">            weight = HuffmanTree[i].weight;</span><br><span class="line">            second = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 合并</span><br><span class="line">void HuffmanCode::Merge(int first, int second, int parent) &#123;</span><br><span class="line">    HuffmanTree[first].parent = HuffmanTree[second].parent = parent; // 父结点</span><br><span class="line">    HuffmanTree[parent].leftChild = first; // 左孩子</span><br><span class="line">    HuffmanTree[parent].rightChild = second; // 右孩子</span><br><span class="line">    HuffmanTree[parent].weight = HuffmanTree[first].weight + HuffmanTree[second].weight; // 权值</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 编码:利用哈夫曼编码原理对数据进行加密</span><br><span class="line">void HuffmanCode::Encode(string str) &#123;</span><br><span class="line">    string code; // 存储符号的不定长二进制编码</span><br><span class="line">    int i, j, k, parent;</span><br><span class="line"></span><br><span class="line">    for (i = 0; i &lt; leafSize; i++) &#123; // 从叶子结点出发</span><br><span class="line">        j = i;</span><br><span class="line">        code = &quot;&quot;; // 初始化为空</span><br><span class="line">        while (HuffmanTree[j].parent != -1) &#123; // 往上找到根结点</span><br><span class="line">            parent = HuffmanTree[j].parent; // 父结点</span><br><span class="line">            if (j == HuffmanTree[parent].leftChild) // 如果是左孩子，则记为0</span><br><span class="line">                code += &quot;0&quot;;</span><br><span class="line">            else // 右孩子，记为1</span><br><span class="line">                code += &quot;1&quot;;</span><br><span class="line">            j = parent; // 上移到父结点</span><br><span class="line">        &#125;</span><br><span class="line">        // 编码要倒过来：因为是从叶子往上走到根，而编码是要从根走到叶子结点</span><br><span class="line">        for (k = (int)code.size() - 1; k &gt;= 0; k--)</span><br><span class="line">            HuffmanTree[i].code += code[k]; // 保存编码</span><br><span class="line">        cout &lt;&lt; &quot;字符：&quot; &lt;&lt; HuffmanTree[i].ch &lt;&lt; &quot;的编码为：&quot; &lt;&lt; HuffmanTree[i].code &lt;&lt; &quot; &quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; &quot;您输入的字符串哈夫曼编码为:&quot; &lt;&lt; endl;</span><br><span class="line">    for (int i = 0; i &lt; str.length(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 0; j &lt; leafSize; j++) &#123;</span><br><span class="line">            if (str[i] == HuffmanTree[j].ch) &#123;</span><br><span class="line">                cout &lt;&lt; HuffmanTree[j].code;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 解码</span><br><span class="line">void HuffmanCode::Decode(string str) &#123;</span><br><span class="line">    string decode, temp; // decode保存整个解码, temp保存每一个解码</span><br><span class="line">    int len = (int)str.size(); // 编码的长度</span><br><span class="line">    int i, j;</span><br><span class="line"></span><br><span class="line">    decode = temp = &quot;&quot;; // 初始化为空</span><br><span class="line">    for (i = 0; i &lt; len; i++) &#123;</span><br><span class="line">        temp += str[i]; // 加一个编码</span><br><span class="line">        for (j = 0; j &lt; leafSize; j++) &#123;</span><br><span class="line">            if (HuffmanTree[j].code == temp) &#123; // 在叶子结点中找到对应的编码</span><br><span class="line">                decode += HuffmanTree[j].ch; // 转成对应的字符</span><br><span class="line">                temp = &quot;&quot;;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (i == len - 1 &amp;&amp; j == leafSize) &#123; // 遍历完都没找到对应的编码</span><br><span class="line">            cout &lt;&lt; &quot;解码出错！&quot; &lt;&lt; endl;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; decode &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main(int argc, const char* argv[]) &#123;</span><br><span class="line">    string str;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;请输入字符串进行编码：&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; str; // 输入要加密的字符串</span><br><span class="line">    HuffmanCode st(str); // 对象</span><br><span class="line">    cout &lt;&lt; &quot;对字符串编码情况如下：&quot; &lt;&lt; endl;</span><br><span class="line">    st.Encode(str); // 编码</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; &quot;请输入要解码的二进制编码:&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; str;</span><br><span class="line">    cout &lt;&lt; &quot;解码如下：&quot; &lt;&lt; endl;</span><br><span class="line">    st.Decode(str); // 解码</span><br><span class="line">    return 0;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -731,6 +658,152 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_4">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_4" class="post-title-link" itemprop="url">Algorithm--快速排序</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:35" itemprop="dateModified" datetime="2022-09-18T16:56:35+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">void printf_T(int A[], int size) &#123;</span><br><span class="line">	for (int i = 0; i &lt; size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; A[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">int Partition(int A[], int low, int high,int size) &#123;</span><br><span class="line">	int pivot = A[low];</span><br><span class="line">	while (low &lt; high) &#123;</span><br><span class="line">		while (low &lt; high &amp;&amp; A[high] &gt;= pivot) &#123;</span><br><span class="line">			high--;</span><br><span class="line">		&#125;</span><br><span class="line">		A[low] = A[high];</span><br><span class="line">		while (low &lt; high &amp;&amp; A[low] &lt;= pivot) &#123;</span><br><span class="line">			low++;</span><br><span class="line">		&#125;</span><br><span class="line">		A[high] = A[low];</span><br><span class="line">	&#125;</span><br><span class="line">	A[low] = pivot;</span><br><span class="line">	printf_T(A, size);</span><br><span class="line">	return low;</span><br><span class="line">&#125;</span><br><span class="line">void QuickSort(int* A, int low, int high,int size) &#123;</span><br><span class="line">	if (low &lt; high) &#123;</span><br><span class="line">		int pivotpos = Partition(A, low, high,size);</span><br><span class="line">		QuickSort(A, low, pivotpos - 1,size);</span><br><span class="line">		QuickSort(A, pivotpos + 1, high,size);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void T_QuickSort() &#123;</span><br><span class="line">	int size;</span><br><span class="line">	cin &gt;&gt; size;</span><br><span class="line">	int* A = new int[size];</span><br><span class="line">	for (int i = 0; i &lt; size; i++) &#123;</span><br><span class="line">		cin &gt;&gt; A[i];</span><br><span class="line">	&#125;</span><br><span class="line">	QuickSort(A, 0, size - 1,size);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">	T_QuickSort();</span><br><span class="line">&#125;         </span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_6">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="渗透压">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渗透压的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/Algorithm_6" class="post-title-link" itemprop="url">Algorithm--最长公共子序列</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 21:42:58" itemprop="dateCreated datePublished" datetime="2022-09-02T21:42:58+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 16:56:32" itemprop="dateModified" datetime="2022-09-18T16:56:32+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0-Code/" itemprop="url" rel="index"><span itemprop="name">学习--Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void LCSLength(int m,int n,char*x,char*y,int **c,int**b) &#123;</span><br><span class="line">	int i, j;</span><br><span class="line">	for (i = 0; i &lt;= m; i++) &#123;</span><br><span class="line">		c[i][0] = 0;</span><br><span class="line">		b[i][0] = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	for (j = 1; j &lt;= n; j++) &#123;</span><br><span class="line">		c[0][j] = 0;</span><br><span class="line">		b[0][j] = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i = 1; i &lt;= m; i++) &#123;</span><br><span class="line">		for (j = 1; j &lt;= n; j++) &#123;</span><br><span class="line">			if (x[i-1] == y[j-1]) &#123;</span><br><span class="line">				c[i][j] = c[i - 1][j - 1]+1;</span><br><span class="line">				b[i][j] = 1;</span><br><span class="line">			&#125;</span><br><span class="line">			else if (c[i - 1][j] &gt;= c[i][j - 1]) &#123;</span><br><span class="line">				c[i][j] = c[i - 1][j];</span><br><span class="line">				b[i][j] = 2;</span><br><span class="line">			&#125;</span><br><span class="line">			else &#123;</span><br><span class="line">				c[i][j] = c[i][j-1];</span><br><span class="line">				b[i][j] = 3;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LCS(int i,int j,char*x,int**b) &#123;</span><br><span class="line">	if (i == 0 || j == 0) &#123;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	if (b[i][j] == 1) &#123;</span><br><span class="line">		LCS(i - 1, j - 1, x,b);</span><br><span class="line">	cout &lt;&lt; x[i-1];</span><br><span class="line">	&#125;</span><br><span class="line">	else if (b[i][j] == 2) &#123;</span><br><span class="line">		LCS(i - 1, j, x, b);</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		LCS(i, j - 1, x, b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void p(int** t,int m,int n) &#123;</span><br><span class="line">	for (int i = 0; i &lt; m; i++) &#123;</span><br><span class="line">		for (int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">			cout &lt;&lt; t[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char* x=(char*)&quot;safasdkhgasdg&quot;;</span><br><span class="line">	char* y = (char*)&quot;adgasg&quot;;</span><br><span class="line">	int m, n;</span><br><span class="line">	m = strlen(x);</span><br><span class="line">	n = strlen(y);</span><br><span class="line">	int** c=new int*[m];</span><br><span class="line">	int** b = new int* [m];</span><br><span class="line">	for (int i = 0; i &lt;= m; i++)&#123;</span><br><span class="line">		c[i] = new int[n];</span><br><span class="line">	&#125;</span><br><span class="line">	for (int i = 0; i &lt;= m; i++) &#123;</span><br><span class="line">		b[i] = new int[n];</span><br><span class="line">	&#125;</span><br><span class="line">	LCSLength(m, n, x, y, c, b);</span><br><span class="line">	p(c, m, n);</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	p(b, m, n);</span><br><span class="line">	LCS(m,n,x,b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
 
@@ -796,7 +869,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -229,8 +229,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/02/Algorithm_6" rel="prev" title="Algorithm--最长公共子序列">
-      <i class="fa fa-chevron-left"></i> Algorithm--最长公共子序列
+    <a href="/2022/09/02/Algorithm_8" rel="prev" title="Algorithm--哈夫曼编码">
+      <i class="fa fa-chevron-left"></i> Algorithm--哈夫曼编码
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/09/02/Algorithm_3" rel="next" title="Algorithm--矩阵连乘">
@@ -306,7 +306,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
