@@ -229,12 +229,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/02/Algorithm_3" rel="prev" title="Algorithm--矩阵连乘">
-      <i class="fa fa-chevron-left"></i> Algorithm--矩阵连乘
+    <a href="/2022/09/02/Algorithm_11" rel="prev" title="Algorithm--Kruskal">
+      <i class="fa fa-chevron-left"></i> Algorithm--Kruskal
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/09/02/Algorithm_2" rel="next" title="Algorithm--二分搜索">
-      Algorithm--二分搜索 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/09/02/Algorithm_10" rel="next" title="Algorithm--Prim">
+      Algorithm--Prim <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -306,7 +306,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

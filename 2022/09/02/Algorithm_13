@@ -23,7 +23,7 @@
   <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm--哈夫曼编码">
-<meta property="og:url" content="https://venomcrt.github.io/2022/09/02/Algorithm_8">
+<meta property="og:url" content="https://venomcrt.github.io/2022/09/02/Algorithm_13">
 <meta property="og:site_name" content="渗透压的博客">
 <meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://venomcrt.github.io/2022/09/02/Algorithm_8">
+<link rel="canonical" href="https://venomcrt.github.io/2022/09/02/Algorithm_13">
 
 
 <script id="page-configurations">
@@ -157,7 +157,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_8">
+    <link itemprop="mainEntityOfPage" href="https://venomcrt.github.io/2022/09/02/Algorithm_13">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -229,12 +229,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/02/OpenGL_1" rel="prev" title="OpenGL--创建三角形">
-      <i class="fa fa-chevron-left"></i> OpenGL--创建三角形
+    <a href="/2022/09/02/Algorithm_2" rel="prev" title="Algorithm--二分搜索">
+      <i class="fa fa-chevron-left"></i> Algorithm--二分搜索
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/09/02/Algorithm_9" rel="next" title="Algorithm--堆排序">
-      Algorithm--堆排序 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/09/02/Algorithm_12" rel="next" title="Algorithm--Dijkstra">
+      Algorithm--Dijkstra <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
